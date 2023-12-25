@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #bac2f4;
+        }
+
+        header {
+            background-color: #7386f0;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2, h3 {
+            color: rgb(0, 0, 0);
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        button {
+            background-color: #7386f0;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #7386f0;
+        }
+
+        .portfolio-item {
+            margin: 20px;
+            padding: 20px;
+            background-color: #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skills-list li {
+            background-color: #7386f0;
+            color: #fff;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 4px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            width: auto;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <h1 style="color:#fff">Portfolio</h1>
+    </header>
+    <center><h1>About Me</h1></center>
+    <section>
+        <h2>Hello there!</h2>
+        <p>I'm Bhumika, a passionate and enthusiastic third-year engineering student with a love for coding and technology. As a dedicated learner in the world of software engineering, I find joy in turning ideas into lines of code that make a real impact.</p>
+    </section>
+
+    <section>
+        <h2>Academic Journey</h2>
+        <p>Currently pursuing my degree in CSE at JSS, I've been fortunate to explore various aspects of engineering, but my heart lies in the realm of programming and software development. The challenges of my academic journey fuel my curiosity, pushing me to dive deeper into the world of algorithms, data structures, and innovative problem-solving.</p>
+    </section>
+
+    <section>
+        <h2>Coding Enthusiast</h2>
+        <p>Coding is not just a skill for me; it's a way of thinking and problem-solving. From turning coffee-fueled late-night coding sessions into functional applications to collaborating with fellow enthusiasts on exciting projects, I thrive in the world of coding. My favorite languages include Python, Java, C, and I'm always eager to explore new technologies that broaden my coding horizons.</p>
+    </section>
+
+    <section>
+        <h2>Tech Community Involvement</h2>
+        <p>Outside of my academic pursuits, I actively engage with the tech community. Whether attending hackathons, participating in coding competitions, or contributing to open-source projects, I enjoy the collaborative and ever-evolving nature of the tech world. Being part of a supportive community helps me stay inspired and motivated.</p>
+    </section>
+
+    <section>
+        <h2>Future Goals</h2>
+        <p>Looking ahead, I aspire to leverage my skills and knowledge to create impactful solutions that make a difference. Whether it's developing innovative software or contributing to projects that positively influence the tech industry, I'm excited about the endless possibilities that coding offers.</p>
+        <p>Join me on this coding adventure, where every line of code tells a story, and every challenge is an opportunity to learn and grow! 💻✨</p>
+    </section>
+
+    <section>
+        <h2>My Projects</h2>
+        <div class="portfolio-item">
+            <img src="project1.png" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>WSA is an rescue animal NGO. It was an honour to develop a website for them as a part of my web development internship.</p>
+        </div><br><br>
+
+        <div class="portfolio-item">
+            <img src="project2.png" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>ToBeHonest is a mental health platform to address all your mental health issues! It was developed in order to address a global concern and ensure people get the help they need!</p>
+
+        </div>
+    </section><br><br>
+    
+    <section>
+        <h2>My Resume</h2>
+        <div class="portfolio-item">
+            <button onclick="resumeopen()">Open: Bhumika_Resume.pdf</button>
+        </div><br>
+    </section>
+
+    <section>
+        <h2>My Skills</h2>
+        <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>SQL</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Contact Me</h2>
+        <div class="contact-form fade-in">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button onclick="sent()">Send Message</button>
+        </div>
+    </section><br>
+
+   <center> <footer>
+        &copy; All rights reserved.
+    </footer> </center>
+    <br>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Add fade-in effect to elements with the 'fade-in' class
+            var fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(function (element) {
+                element.classList.add('active');
+            });
+        });
+        function sent(){
+            alert("Message sent!");
+        }
+        function resumeopen(){
+            var pdfPath = 'Bhumika.pdf';
+            window.open(pdfPath, '_blank');
+        }
+    </script>
+
+</body>
+</html>
